@@ -20,3 +20,4 @@
 ├── assets/               # Icons, themes, etc.
 ├── config/               # Default config files
 ├── tests/                # Unit/integration tests
+ 
