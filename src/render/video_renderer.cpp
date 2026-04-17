@@ -1,6 +1,4 @@
-#include <QtMultimedia>
-#include <QtMultimediaWidgets>
-#include <QApplication>
+#include "renderer_interface.hpp"
 
 class VideoRenderer {
 private:
@@ -23,7 +21,7 @@ public:
     }
     void setLooping(bool loop) { // TODO: Might Need To Make Pointer (If Null State Available)
             if (loop) {
-                player->setLoops(-1));  // Qt6.2+ built-in loop
+                player->setLoops(-1);  // Qt6.2+ built-in loop
             } else {
                 player->setLoops(1);
             }
