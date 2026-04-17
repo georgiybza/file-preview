@@ -25,7 +25,6 @@ int get_user_input(int pressed_key) {
 // TODO: QT Event System Captures All Keystrokes on Focused Window; in other words this might be what I need
 int main() {
 
-
-
+	
 
 }
