@@ -5,6 +5,8 @@
 #include <QtMultimediaWidgets>
 #include <QApplication>
 #include <QString>
+#include <memory>
+#include "../../config/user_config.hpp"
 
 class Renderer {
 public:
