@@ -1,0 +1,6 @@
+Currently in render, add support for open, show, and close methods; but add functionality in the interface
+- Could the renderer instead be implemented for all interface types? Why do we need each manual one?
+
+
+Goals:
+- I ideally want this to work regardless of file manager, but the two biggest ones would be GNOME, KDE; and potentially a File CLI where a user could use arrow keys to move between files and press space to open/close them.

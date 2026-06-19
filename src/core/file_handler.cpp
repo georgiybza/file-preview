@@ -2,12 +2,13 @@
 #include <string>
 #include <unordered_set>
 #include <filesystem>
-#define UNSUPPORTED_FILE_ERROR = "[ERROR]: INVALID FILE TYPE"
-#define INVALID_COMMAND = "[ERROR]: INVALID COMMAND"
+#define UNSUPPORTED_FILE_ERROR "[ERROR]: INVALID FILE TYPE"
+#define INVALID_COMMAND "[ERROR]: INVALID COMMAND"
 
 namespace ft = std::filesystem;
 
 bool is_supported(const std::string& filename) {
+    // Supported File Types
     static const std::unordered_set<std::string> valid_extensions = {".txt", ".mp4", ".mp3", ".jpeg", ".png", ".pdf"};
     
     std::string file_type = ft::path(filename).extension();
@@ -33,6 +34,12 @@ bool is_valid_input(const int &argc, char** const &argv) {
 }
 
 int main(int argc, char *argv[]) {
+
+    if (argc < 3) {
+        std::cout << "[STATUS] Not Enough Arguments, Terminating..." << std::endl;
+        return 0;
+    }
+
     std::cout << "[STATUS] Supported File: " << is_supported(argv[2]) << std::endl;
     std::cout << "[STATUS] Supported Input: " << is_valid_input(argc, argv) << std::endl;
     //is_valid_input(argc, argv);
